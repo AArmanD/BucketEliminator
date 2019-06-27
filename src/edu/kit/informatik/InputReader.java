@@ -22,10 +22,9 @@ public class InputReader {
 
         boolean found = false;
 
-        // TODO: 25.06.19 regexes should check for integer overflow
 
         for (int i = 0; i < input.length; i++) {
-            if (input[i].matches("p cnf [1-9][0-9]{0,8} [1-9][0-9]{0,8}")) {
+            if (input[i].matches("p cnf [1-9] [1-9][0-9]{0,8}")) {
                 pLine = i;
                 found = true;
             }
@@ -49,15 +48,35 @@ public class InputReader {
             inputForAlgorithm.add(new LinkedList<>());
         }
 
-        int counter = 0;
+        int startClauses = pLine + 1;
         for (int i = pLine + 1; i < input.length; i++) {
             String[] clause = input[i].split(" ");
             if (clause[0].equals("c"))
-                continue;
-            for (int j = 0; j < clause.length - 1; j++) { // because last character is 0
-                inputForAlgorithm.get(counter).add(Integer.parseInt(clause[j]));
-            }
-            counter++;
+                startClauses ++;
+            else
+                break;
+        }
+
+        if (startClauses + countClauses > input.length)
+            throw new InputException("wrong number of clauses inputted");
+
+        int counter = 0;
+        for (int i = startClauses; i < startClauses + countClauses; i++) {
+            String regex = "(-?[1-9] )+0";
+            if (input[i].matches(regex)){
+                String[] clause = input[i].split(" ");
+                int last = 0;
+                for (int j = 0; j < clause.length - 1; j++) { // because last character is 0
+                    if (Math.abs(Integer.parseInt(clause[j])) >= last) {
+                                inputForAlgorithm.get(counter).add(Integer.parseInt(clause[j]));
+                            last = Math.abs(Integer.parseInt(clause[j]));
+                    } else
+                        throw new InputException("Wrong input inserted");
+                }
+                counter++;
+            } else
+                throw new InputException("A wrong input is inserted");
+
         }
 
         new BucketEliminator().sortAndStart(inputForAlgorithm, countVariables);

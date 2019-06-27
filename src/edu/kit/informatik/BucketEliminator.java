@@ -1,6 +1,5 @@
 package edu.kit.informatik;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
