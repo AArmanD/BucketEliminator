@@ -1,5 +1,6 @@
 package edu.kit.informatik;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -31,6 +32,7 @@ public class BucketEliminator {
         }
 
         checkTautology();
+        checkSubsumption();
 
 
         //start the bucket elimination and print the result
@@ -54,6 +56,7 @@ public class BucketEliminator {
             }
 
             checkTautology();
+            checkSubsumption();
         }
 
         return true;
@@ -77,14 +80,39 @@ public class BucketEliminator {
     }
 
     /**
-     * This method checks if one of the buckets is a subsumption and if yes removes that
+     * This method checks if one of the buckets is a subsumption and if there are existing ones they will be removed
      */
     private void checkSubsumption() {
         for (int i = 0; i < buckets.size(); i++) {
-            for (int j = 0; j < buckets.get(i).getNumbers().size(); j++) {
+            LinkedList<Integer> tmp = new LinkedList<>();
+            for (int j = 0; j < buckets.get(i).getNumbers().size() - 1; j++) {
+                //check =>
+                int counter = 0;
                 for (int k = 0; k < buckets.get(i).getNumbers().get(j).size(); k++) {
-                    
+                    if (buckets.get(i).getNumbers().get(j + 1).contains(buckets.get(i).getNumbers().get(j).get(k))) {
+                        counter ++;
+                    }
                 }
+                if (counter == buckets.get(i).getNumbers().get(j).size()) {
+                    tmp.add(j);
+                    continue;
+                }
+
+                //check <=
+                counter = 0;
+                for (int k = 0; k < buckets.get(i).getNumbers().get(j + 1).size(); k++) {
+                    if (buckets.get(i).getNumbers().get(j).contains(buckets.get(i).getNumbers().get(j + 1).get(k))) {
+                        counter ++;
+                    }
+                }
+                if (counter == buckets.get(i).getNumbers().get(j + 1).size()) {
+                    tmp.add(j + 1);
+                    continue;
+                }
+            }
+
+            for (int j = 0; j < tmp.size(); j++) {
+                buckets.get(i).deleteNumber(tmp.get(j));
             }
         }
     }

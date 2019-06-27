@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04aba812-97a7-47b2-ad21-5c6de1981ae6" name="Default Changelist" comment="" />
+    <list default="true" id="04aba812-97a7-47b2-ad21-5c6de1981ae6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/kit/informatik/BucketEliminator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/kit/informatik/BucketEliminator.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +84,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/BucketEliminator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            <state relative-caret-position="1040">
+              <caret line="82" column="116" selection-start-line="82" selection-start-column="116" selection-end-line="82" selection-end-column="116" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,6 +111,9 @@
       <replace>LinkedList&lt;Integer&gt;</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -119,11 +129,13 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1909" />
-    <option name="width" value="1940" />
-    <option name="height" value="2171" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1594" />
+    <option name="y" value="-32" />
+    <option name="width" value="1941" />
+    <option name="height" value="2172" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -156,6 +168,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -210,15 +223,15 @@
       <workItem from="1561483700762" duration="11047000" />
       <workItem from="1561555195082" duration="7103000" />
       <workItem from="1561580617783" duration="12272000" />
-      <workItem from="1561628251317" duration="9436000" />
+      <workItem from="1561628251317" duration="12203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39858000" />
+    <option name="totallyTimeSpent" value="42625000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1455" extended-state="7" />
+    <frame x="-7" y="-7" width="2575" height="1455" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -237,7 +250,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32955405" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.33155894" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.33106577" />
       <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.39606953" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -323,8 +336,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/kit/informatik/BucketEliminator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state relative-caret-position="1040">
+          <caret line="82" column="116" selection-start-line="82" selection-start-column="116" selection-end-line="82" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
